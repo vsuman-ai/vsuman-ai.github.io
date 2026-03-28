@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="About Vicky Suman - Senior Data Science Engineer specializing in LLM systems, AI platforms, and data infrastructure"
+        />
+
+        <!-- Open Graph / Social Media Preview -->
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="https://vsuman-ai.github.io/about.html"
+        />
+        <meta property="og:title" content="About - Vicky Suman" />
+        <meta
+            property="og:description"
+            content="Senior Data Science Engineer architecting scalable, production-grade AI platforms across LLM systems, NLP, computer vision, and distributed data infrastructure."
+        />
+        <meta
+            property="og:image"
+            content="https://vsuman-ai.github.io/social-card.png"
+        />
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="vsuman-ai.github.io" />
+        <meta
+            property="twitter:url"
+            content="https://vsuman-ai.github.io/about.html"
+        />
+        <meta name="twitter:title" content="About - Vicky Suman" />
+        <meta
+            name="twitter:description"
+            content="Senior Data Science Engineer architecting scalable, production-grade AI platforms across LLM systems, NLP, computer vision, and distributed data infrastructure."
+        />
+        <meta
+            name="twitter:image"
+            content="https://vsuman-ai.github.io/social-card.png"
+        />
+
+        <title>About - Vicky Suman</title>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            <img src="/profile.png" alt="Vicky Suman" class="portrait-small" />
+            <h1><a href="/">Vicky Suman</a></h1>
+            <p>Senior Data Science Engineer</p>
+        </header>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about.html">About</a>
+            <a href="/blog.html">Blog</a>
+            <a href="/projects.html">Projects</a>
+            <a href="/resume.html">Resume</a>
+        </nav>
+
+        <main>
+            <section id="about">
+                <h2>About</h2>
+
+                <p>
+                    I'm Vicky Suman, a Senior Data Science Engineer based in
+                    Gurugram, India. Over nearly a decade of building AI systems
+                    across cybersecurity, risk intelligence, and enterprise
+                    platforms, I've learned that the most important skill in
+                    this field isn't knowing the best algorithm — it's knowing
+                    how to turn a messy, high-stakes problem into a system that
+                    reliably delivers value at scale.
+                </p>
+
+                <p>Not in notebooks. Not in demos. In production.</p>
+
+                <p>
+                    At Ontic Technologies, I lead the architecture and delivery
+                    of enterprise AI platforms that security teams depend on
+                    every day. The problems I work on don't have clean datasets
+                    or obvious solutions. They have noisy signals, tight latency
+                    budgets, real clients, and real money on the line. That's
+                    the environment I thrive in.
+                </p>
+            </section>
+
+            <section id="risk-intelligence">
+                <h2>Cutting Through the Noise — Risk Event Intelligence</h2>
+
+                <p>
+                    Security teams at enterprise companies were drowning.
+                    Thousands of raw threat signals flooding in every hour, no
+                    way to tell signal from noise, and clients paying for
+                    intelligence that wasn't actually intelligent.
+                </p>
+
+                <p>
+                    I was tasked with architecting a platform from the ground up
+                    that could ingest, deduplicate, cluster, classify, and
+                    geo-locate security events — in real time, at enterprise
+                    scale, with enough precision to actually change how analysts
+                    made decisions.
+                </p>
+
+                <p>
+                    I built a real-time embedding pipeline on Kafka and Triton
+                    Inference Server communicating over gRPC, storing vectors in
+                    Qdrant and MongoDB to power semantic search and trend
+                    clustering. On top, I engineered an LLM-based contextual
+                    location extraction layer with reverse geocoding, and a
+                    hypothesis-driven severity classification system using
+                    few-shot prompting via DSPy — with prompt optimization
+                    running through GEPA, SIMBA, and Decision-Tree optimizers
+                    to stay reliable at scale.
+                </p>
+
+                <p>
+                    The platform launched as a revenue-generating product at
+                    ~$7.5K per client, processing 10,000+ messages per hour.
+                    Alert noise dropped significantly — analysts went from
+                    drowning in raw signals to working with actual intelligence.
+                </p>
+            </section>
+
+            <section id="face-detection">
+                <h2>Seeing Clearly — Denoising Face Detection at Scale</h2>
+
+                <p>
+                    Our computer vision pipeline was generating too many
+                    false-positive image matches. Beyond the accuracy problem,
+                    every false positive was triggering a costly third-party API
+                    call — quietly compounding into a serious monthly burn.
+                </p>
+
+                <p>
+                    I needed to rebuild the pipeline in a way that was both
+                    smarter and leaner — reducing errors without increasing
+                    infrastructure complexity.
+                </p>
+
+                <p>
+                    I designed a two-stage denoising system combining YOLOv11
+                    ONNX with a fine-tuned Vision Transformer (ViT), deployed
+                    on Triton Inference Server with batched inference. The
+                    architecture meant we only escalated confident detections —
+                    dramatically reducing noise before it ever hit the API layer.
+                </p>
+
+                <p>
+                    False-positive matches fell sharply, and by eliminating
+                    redundant third-party calls, we saved $5K/month in
+                    infrastructure costs. Better engineering, directly mapped to
+                    business impact.
+                </p>
+            </section>
+
+            <section id="genai-metrics">
+                <h2>Teaching AI to Evaluate Itself — GenAI Metrics Platform</h2>
+
+                <p>
+                    As LLM usage expanded across our product suite, we had a
+                    growing blind spot: no consistent, structured way to measure
+                    whether our models were actually performing well across
+                    different modules and tasks.
+                </p>
+
+                <p>
+                    I set out to build an internal evaluation platform that
+                    could generate structured, backend-compatible metrics
+                    automatically — without requiring manual review at every
+                    step.
+                </p>
+
+                <p>
+                    I fine-tuned LLMs using QLoRA and served them via TGI and
+                    DSPy, designing the system to output structured evaluation
+                    data in API-compatible format — plugging directly into
+                    existing backend workflows without adding friction to the
+                    development cycle.
+                </p>
+
+                <p>
+                    Teams could now monitor LLM performance across modules
+                    systematically. What was an invisible risk became a
+                    measurable, manageable signal.
+                </p>
+            </section>
+
+            <section id="data-infrastructure">
+                <h2>Building the Foundation — Data Infrastructure That Doesn't Break</h2>
+
+                <p>
+                    Great AI models sitting on fragile data infrastructure will
+                    always eventually fail in production. Across multiple
+                    projects, I kept running into the same structural problem:
+                    pipelines that couldn't scale, monorepos that couldn't be
+                    maintained, and data lakes that couldn't support real-time
+                    use cases.
+                </p>
+
+                <p>
+                    I took on the responsibility of building the data foundation
+                    that the rest of the AI stack could rely on.
+                </p>
+
+                <p>
+                    I designed and deployed AWS-based data lake pipelines using
+                    Lambda, Glue (PySpark), and Hudi on S3 for real-time event
+                    processing. I also established a Monorepo architecture using
+                    Pants, enabling modular builds, dependency isolation, and
+                    faster multi-service development workflows — and stood up
+                    production-grade LLM inference on Kubernetes using TGI to
+                    serve multiple modules at scale.
+                </p>
+
+                <p>
+                    The infrastructure became the platform — stable, observable,
+                    and modular enough that new AI capabilities could be shipped
+                    without rebuilding the foundation each time.
+                </p>
+            </section>
+
+            <section id="origins">
+                <h2>Where It Started — Cyber Risk and the Cost of Being Wrong</h2>
+
+                <p>
+                    At RMS (Moody's Analytics), I spent years building causal
+                    models for cyber risk — estimating Business Email Compromise
+                    likelihood by company size, sector, and jurisdiction;
+                    building multilingual NLP pipelines using M2M-100 and
+                    mBART-50 to extract threat intelligence across languages;
+                    and designing custom NER systems with CRF and SpaCy to
+                    surface affected organizations, attack types, and financial
+                    impact from open-source feeds.
+                </p>
+
+                <p>
+                    The difference was the stakes. These weren't product
+                    features — they were models informing financial decisions
+                    for insurers and risk analysts worldwide. Being wrong had
+                    real-world consequences. That pressure sharpened something
+                    in me that hasn't dulled since: a deep, almost stubborn
+                    respect for the gap between a model that performs on a
+                    benchmark and a model that's genuinely trustworthy in
+                    production.
+                </p>
+
+                <p>
+                    Even earlier, at Phenom People, I was building AI chatbots
+                    with RASA and Dialogflow before conversational AI was
+                    mainstream — learning early that understanding user intent
+                    is as much a design problem as a technical one.
+                </p>
+            </section>
+
+            <section id="drives-me">
+                <h2>What Drives Me</h2>
+
+                <p>
+                    I hold an M.Sc. in Applied Statistics and Informatics from
+                    IIT Bombay and ranked All India 60 in IIT JAM. There's a
+                    mathematician underneath all the engineering, and that
+                    foundation quietly shapes how I think about every model,
+                    every tradeoff, every system design decision.
+                </p>
+
+                <p>
+                    I've led teams, defined technical direction, and shipped
+                    products that clients pay for and depend on. I take
+                    ownership seriously — not because I'm told to, but because I
+                    genuinely care whether the thing I build actually works for
+                    the person using it.
+                </p>
+
+                <p>
+                    My core stack spans Python, Docker, Kubernetes, AWS,
+                    MongoDB, Kafka, Triton, DSPy, Hugging Face, Dagster, and
+                    TGI/vLLM — but I think of tools as means, never as
+                    identity. The right tool is the one that solves the problem
+                    cleanly and holds up six months later.
+                </p>
+
+                <p>
+                    My long-term ambition is to keep pushing at the frontier of
+                    agentic AI and LLM systems — not just deploying what exists,
+                    but contributing to what comes next.
+                </p>
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2026 Vicky Suman</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="160" y1="190" x2="330" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#34D399"/>
+    </linearGradient>
+    <filter id="shadow" x="0" y="0" width="1200" height="630" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="8" stdDeviation="18" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" rx="0" fill="url(#bg)"/>
+  <rect x="40" y="40" width="1120" height="550" rx="28" stroke="#FFFFFF1A" stroke-width="1.5" fill="#FFFFFF05"/>
+
+  <g filter="url(#shadow)">
+    <rect x="110" y="175" width="170" height="170" rx="36" fill="url(#accent)"/>
+    <text x="195" y="288" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700" fill="#F9FAFB">VS</text>
+  </g>
+
+  <text x="340" y="245" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700" letter-spacing="-1.5" fill="#F9FAFB">Vicky Suman</text>
+  <text x="340" y="315" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="400" fill="#CBD5E1">Senior Data Science Engineer</text>
+
+  <rect x="340" y="372" width="318" height="54" rx="27" fill="#FFFFFF0F" stroke="#FFFFFF1A" stroke-width="1"/>
+  <text x="499" y="407" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="500" fill="#93C5FD">vsuman-ai.github.io</text>
+
+  <circle cx="1045" cy="148" r="92" fill="#60A5FA1A"/>
+  <circle cx="1078" cy="505" r="132" fill="#34D39914"/>
+</svg>
