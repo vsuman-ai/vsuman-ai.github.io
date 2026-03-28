@@ -1,0 +1,652 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="About Vicky Suman - Senior Data Science Engineer specializing in LLM systems, AI platforms, and data infrastructure" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="About - Vicky Suman" />
+    <meta property="og:description" content="Senior Data Science Engineer architecting scalable, production-grade AI platforms across LLM systems, NLP, computer vision, and distributed data infrastructure." />
+
+    <title>About — Vicky Suman</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Mono:wght@300;400&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg:           #0d0f14;
+            --surface:      #13161d;
+            --border:       #1e2330;
+            --accent:       #c8a96e;
+            --accent-dim:   #8a6f40;
+            --text:         #e8e4dc;
+            --text-muted:   #7a7f8e;
+            --text-faint:   #3a3f50;
+            --tag-bg:       #181c27;
+            --tag-border:   #252b3b;
+            --success:      #4a9e7a;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Lora', Georgia, serif;
+            font-size: 17px;
+            line-height: 1.8;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ── Noise texture overlay ── */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.4;
+        }
+
+        /* ── Header ── */
+        header {
+            position: relative;
+            padding: 3.5rem 2rem 2.5rem;
+            max-width: 780px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            animation: fadeUp 0.7s ease both;
+        }
+
+        .eyebrow {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.72rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.2rem;
+        }
+
+        header h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: var(--text);
+        }
+
+        header h1 a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        header p.tagline {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+            margin-top: 0.3rem;
+        }
+
+        /* ── Nav ── */
+        nav {
+            max-width: 780px;
+            margin: 0 auto 0;
+            padding: 0 2rem 2rem;
+            display: flex;
+            gap: 0.3rem;
+            flex-wrap: wrap;
+            animation: fadeUp 0.7s 0.1s ease both;
+        }
+
+        nav a {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            padding: 0.3rem 0.75rem;
+            border: 1px solid var(--border);
+            border-radius: 3px;
+            transition: all 0.2s;
+            letter-spacing: 0.06em;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent);
+            border-color: var(--accent-dim);
+            background: rgba(200,169,110,0.06);
+        }
+
+        /* ── Divider ── */
+        .divider {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            border: none;
+            border-top: 1px solid var(--border);
+        }
+
+        /* ── Main ── */
+        main {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 3rem 2rem 6rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* ── Section ── */
+        section {
+            margin-bottom: 4rem;
+            animation: fadeUp 0.8s ease both;
+        }
+
+        section:nth-child(1) { animation-delay: 0.15s; }
+        section:nth-child(2) { animation-delay: 0.25s; }
+        section:nth-child(3) { animation-delay: 0.35s; }
+        section:nth-child(4) { animation-delay: 0.45s; }
+        section:nth-child(5) { animation-delay: 0.55s; }
+        section:nth-child(6) { animation-delay: 0.65s; }
+        section:nth-child(7) { animation-delay: 0.75s; }
+
+        .section-label {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.68rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        h2.story-title {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(1.3rem, 3vw, 1.75rem);
+            font-weight: 700;
+            line-height: 1.25;
+            color: var(--text);
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        h2.story-title em {
+            font-style: italic;
+            color: var(--accent);
+            font-family: 'Lora', serif;
+            font-weight: 400;
+        }
+
+        p {
+            color: #c8c4bc;
+            margin-bottom: 1.1rem;
+            max-width: 68ch;
+        }
+
+        p:last-child { margin-bottom: 0; }
+
+        p strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        /* ── Story card ── */
+        .story-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--accent-dim);
+            border-radius: 6px;
+            padding: 2rem 2.2rem;
+            margin-bottom: 2rem;
+            transition: border-left-color 0.3s;
+        }
+
+        .story-card:hover {
+            border-left-color: var(--accent);
+        }
+
+        /* ── STAR labels inside card ── */
+        .star-block {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .star-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .star-tag {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.62rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
+            background: rgba(200,169,110,0.08);
+            border: 1px solid var(--accent-dim);
+            border-radius: 2px;
+            padding: 0.2rem 0.45rem;
+            min-width: 3.2rem;
+            text-align: center;
+            margin-top: 0.15rem;
+            flex-shrink: 0;
+        }
+
+        .star-item p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        /* ── Tech tags ── */
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 1.2rem;
+        }
+
+        .tag {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.04em;
+            color: var(--text-muted);
+            background: var(--tag-bg);
+            border: 1px solid var(--tag-border);
+            border-radius: 3px;
+            padding: 0.2rem 0.6rem;
+            transition: all 0.2s;
+        }
+
+        .tag:hover {
+            color: var(--accent);
+            border-color: var(--accent-dim);
+        }
+
+        /* ── Impact pill ── */
+        .impact {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.72rem;
+            color: var(--success);
+            background: rgba(74,158,122,0.08);
+            border: 1px solid rgba(74,158,122,0.25);
+            border-radius: 20px;
+            padding: 0.25rem 0.75rem;
+            margin-top: 1rem;
+            letter-spacing: 0.04em;
+        }
+
+        .impact::before { content: '↑'; font-size: 0.8rem; }
+
+        /* ── Stack grid ── */
+        .stack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 0.6rem;
+            margin-top: 1.2rem;
+        }
+
+        .stack-item {
+            background: var(--tag-bg);
+            border: 1px solid var(--tag-border);
+            border-radius: 4px;
+            padding: 0.55rem 0.75rem;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            letter-spacing: 0.03em;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .stack-item:hover {
+            color: var(--accent);
+            border-color: var(--accent-dim);
+            background: rgba(200,169,110,0.05);
+        }
+
+        .stack-dot {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--accent-dim);
+            flex-shrink: 0;
+        }
+
+        /* ── Closing callouts ── */
+        .callout-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 540px) {
+            .callout-grid { grid-template-columns: 1fr; }
+        }
+
+        .callout {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1.2rem 1.4rem;
+        }
+
+        .callout-label {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .callout p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* ── Footer ── */
+        footer {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 2rem;
+            border-top: 1px solid var(--border);
+            font-family: 'DM Mono', monospace;
+            font-size: 0.72rem;
+            color: var(--text-faint);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        footer a:hover { color: var(--accent); }
+
+        /* ── Animations ── */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(18px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ── Responsive ── */
+        @media (max-width: 600px) {
+            header, nav, main, footer { padding-left: 1.25rem; padding-right: 1.25rem; }
+            .story-card { padding: 1.4rem 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <span class="eyebrow">Sr. Data Science Engineer</span>
+        <h1><a href="/">Vicky Suman</a></h1>
+        <p class="tagline">LLM Systems · AI Platforms · Data Infrastructure · Gurugram, India</p>
+    </header>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about.html" class="active">About</a>
+        <a href="/projects.html">Projects</a>
+        <a href="/resume.html">Resume</a>
+        <a href="https://medium.com/@vickysuman" target="_blank">Blog</a>
+    </nav>
+
+    <hr class="divider" />
+
+    <main>
+
+        <!-- ── Intro ── -->
+        <section id="intro">
+            <div class="section-label">About Me</div>
+            <p>
+                I'm Vicky Suman, a Senior Data Science Engineer based in Gurugram, India — and I've spent nearly a decade doing one thing consistently: turning complex, high-stakes problems into AI systems that actually work in the real world.
+            </p>
+            <p>Not in notebooks. Not in demos. <strong>In production.</strong></p>
+            <p>
+                At Ontic Technologies, I lead the architecture and delivery of enterprise AI platforms that security teams depend on every day. The problems I work on don't have clean datasets or obvious solutions. They have noisy signals, tight latency budgets, real clients, and real money on the line. That's the environment I thrive in.
+            </p>
+        </section>
+
+        <!-- ── Story 1 ── -->
+        <section id="risk-intelligence">
+            <div class="section-label">Project 01</div>
+            <h2 class="story-title">Cutting Through the Noise — <em>Risk Event Intelligence</em></h2>
+
+            <div class="story-card">
+                <div class="star-block">
+                    <div class="star-item">
+                        <span class="star-tag">S</span>
+                        <p>Security teams at enterprise companies were drowning. Thousands of raw threat signals flooding in every hour, no way to tell signal from noise, and clients paying for intelligence that wasn't actually intelligent.</p>
+                    </div>
+                    <div class="star-item">
+                        <span class="star-tag">T</span>
+                        <p>I was tasked with architecting a platform from the ground up that could ingest, deduplicate, cluster, classify, and geo-locate security events — in real time, at enterprise scale, with enough precision to actually change how analysts made decisions.</p>
+                    </div>
+                    <div class="star-item">
+                        <span class="star-tag">A</span>
+                        <p>I built a real-time embedding pipeline on <strong>Kafka</strong> and <strong>Triton Inference Server</strong> communicating over <strong>gRPC</strong>, storing vectors in <strong>Qdrant</strong> and <strong>MongoDB</strong> to power semantic search and trend clustering. On top, I engineered an LLM-based contextual location extraction layer with reverse geocoding, and a hypothesis-driven severity classification system using few-shot prompting via <strong>DSPy</strong> — with prompt optimization running through GEPA, SIMBA, and Decision-Tree optimizers to stay reliable at scale.</p>
+                    </div>
+                    <div class="star-item">
+                        <span class="star-tag">R</span>
+                        <p>The platform launched as a revenue-generating product at ~$7.5K per client, processing <strong>10,000+ messages per hour</strong>. Alert noise dropped significantly — analysts went from drowning in raw signals to working with actual intelligence.</p>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">Kafka</span><span class="tag">Triton Inference Server</span><span class="tag">gRPC</span>
+                    <span class="tag">Qdrant</span><span class="tag">MongoDB</span><span class="tag">DSPy</span>
+                    <span class="tag">Few-shot Prompting</span><span class="tag">Reverse Geocoding</span><span class="tag">LLM</span>
+                </div>
+                <div class="impact">Revenue-generating product · $7.5K/client · 10K+ msg/hr</div>
+            </div>
+        </section>
+
+        <!-- ── Story 2 ── -->
+        <section id="face-detection">
+            <div class="section-label">Project 02</div>
+            <h2 class="story-title">Seeing Clearly — <em>Denoising Face Detection at Scale</em></h2>
+
+            <div class="story-card">
+                <div class="star-block">
+                    <div class="star-item">
+                        <span class="star-tag">S</span>
+                        <p>Our computer vision pipeline was generating too many false-positive image matches. Beyond the accuracy problem, every false positive was triggering a costly third-party API call — quietly compounding into a serious monthly burn.</p>
+                    </div>
+                    <div class="star-item">
+                        <span class="star-tag">T</span>
+                        <p>Rebuild the pipeline to be smarter and leaner — reducing errors without increasing infrastructure complexity.</p>
+                    </div>
+                    <div class="star-item">
+                        <span class="star-tag">A</span>
+                        <p>I designed a two-stage denoising system combining <strong>YOLOv11 ONNX</strong> with a fine-tuned <strong>Vision Transformer (ViT)</strong>, deployed on Triton with batched inference. The architecture meant we only escalated confident detections — dramatically reducing noise before it ever hit the API layer.</p>
+                    </div>
+                    <div class="star-item">
+                        <span class="star-tag">R</span>
+                        <p>False-positive matches fell sharply, and by eliminating redundant third-party calls, we saved <strong>$5K/month</strong> in infrastructure costs. Better engineering, directly mapped to business impact.</p>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">YOLOv11 ONNX</span><span class="tag">Vision Transformer (ViT)</span>
+                    <span class="tag">Triton Inference Server</span><span class="tag">Batched Inference</span><span class="tag">Computer Vision</span>
+                </div>
+                <div class="impact">$5K/month infrastructure savings · Sharply fewer false positives</div>
+            </div>
+        </section>
+
+        <!-- ── Story 3 ── -->
+        <section id="genai-metrics">
+            <div class="section-label">Project 03</div>
+            <h2 class="story-title">Teaching AI to Evaluate Itself — <em>GenAI Metrics Platform</em></h2>
+
+            <div class="story-card">
+                <div class="star-block">
+                    <div class="star-item">
+                        <span class="star-tag">S</span>
+                        <p>As LLM usage expanded across our product suite, we had a growing blind spot: no consistent, structured way to measure whether our models were actually performing well across different modules and tasks.</p>
+                    </div>
+                    <div class="star-item">
+                        <span class="star-tag">T</span>
+                        <p>Build an internal evaluation platform that could generate structured, backend-compatible metrics automatically — without requiring manual review at every step.</p>
+                    </div>
+                    <div class="star-item">
+                        <span class="star-tag">A</span>
+                        <p>I fine-tuned LLMs using <strong>QLoRA</strong> and served them via <strong>TGI</strong> and <strong>DSPy</strong>, designing the system to output structured evaluation data in API-compatible format — plugging directly into existing backend workflows without adding friction.</p>
+                    </div>
+                    <div class="star-item">
+                        <span class="star-tag">R</span>
+                        <p>Teams could now monitor LLM performance across modules systematically. What was an invisible risk became a <strong>measurable, manageable signal</strong>.</p>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">QLoRA</span><span class="tag">TGI</span><span class="tag">DSPy</span>
+                    <span class="tag">LLM Fine-tuning</span><span class="tag">Hugging Face</span><span class="tag">Structured Outputs</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Story 4 ── -->
+        <section id="data-infra">
+            <div class="section-label">Project 04</div>
+            <h2 class="story-title">Building the Foundation — <em>Data Infrastructure That Doesn't Break</em></h2>
+
+            <div class="story-card">
+                <div class="star-block">
+                    <div class="star-item">
+                        <span class="star-tag">S</span>
+                        <p>Great AI models sitting on fragile data infrastructure will always eventually fail in production. Across multiple projects, I kept running into the same structural problem: pipelines that couldn't scale, monorepos that couldn't be maintained, data lakes that couldn't support real-time use cases.</p>
+                    </div>
+                    <div class="star-item">
+                        <span class="star-tag">T</span>
+                        <p>Build the data foundation that the rest of the AI stack could reliably depend on.</p>
+                    </div>
+                    <div class="star-item">
+                        <span class="star-tag">A</span>
+                        <p>I designed <strong>AWS-based data lake pipelines</strong> using Lambda, Glue (PySpark), and Hudi on S3 for real-time event processing. I established a <strong>Monorepo architecture with Pants</strong> for modular, dependency-isolated development, and stood up production-grade <strong>LLM inference on Kubernetes using TGI</strong> to serve multiple modules at scale.</p>
+                    </div>
+                    <div class="star-item">
+                        <span class="star-tag">R</span>
+                        <p>The infrastructure became the platform — stable, observable, and modular enough that new AI capabilities could be shipped without rebuilding the foundation each time.</p>
+                    </div>
+                </div>
+                <div class="tags">
+                    <span class="tag">AWS Lambda</span><span class="tag">Glue (PySpark)</span><span class="tag">Hudi on S3</span>
+                    <span class="tag">Kubernetes</span><span class="tag">TGI</span><span class="tag">Pants Monorepo</span><span class="tag">Dagster</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Origins ── -->
+        <section id="origins">
+            <div class="section-label">Where It Started</div>
+            <h2 class="story-title">Cyber Risk & <em>the Cost of Being Wrong</em></h2>
+            <p>
+                At <strong>RMS (Moody's Analytics)</strong>, I spent years building causal models for cyber risk — estimating Business Email Compromise likelihood by company size, sector, and jurisdiction; building multilingual NLP pipelines using <strong>M2M-100</strong> and <strong>mBART-50</strong> to extract threat intelligence across languages; and designing custom NER systems with <strong>CRF</strong> and <strong>SpaCy</strong> to surface affected organizations, attack types, and financial impact from open-source feeds.
+            </p>
+            <p>
+                The difference was the stakes. These weren't product features — they were models informing financial decisions for insurers and risk analysts worldwide. Being wrong had real-world consequences. That pressure sharpened something in me that hasn't dulled since: a deep, almost stubborn respect for the gap between a model that <em>performs on a benchmark</em> and a model that's genuinely <em>trustworthy in production</em>.
+            </p>
+            <p>
+                Even earlier, at <strong>Phenom People</strong>, I was building AI chatbots with <strong>RASA</strong> and <strong>Dialogflow</strong> before conversational AI was mainstream — learning early that understanding user intent is as much a design problem as a technical one.
+            </p>
+        </section>
+
+        <!-- ── Stack ── -->
+        <section id="stack">
+            <div class="section-label">Core Stack</div>
+            <p>I treat tools as means, never as identity. The right tool is the one that solves the problem cleanly and holds up six months later.</p>
+            <div class="stack-grid">
+                <div class="stack-item"><span class="stack-dot"></span>Python</div>
+                <div class="stack-item"><span class="stack-dot"></span>Docker</div>
+                <div class="stack-item"><span class="stack-dot"></span>Kubernetes</div>
+                <div class="stack-item"><span class="stack-dot"></span>AWS</div>
+                <div class="stack-item"><span class="stack-dot"></span>Kafka</div>
+                <div class="stack-item"><span class="stack-dot"></span>MongoDB</div>
+                <div class="stack-item"><span class="stack-dot"></span>Triton Server</div>
+                <div class="stack-item"><span class="stack-dot"></span>DSPy</div>
+                <div class="stack-item"><span class="stack-dot"></span>TGI / vLLM</div>
+                <div class="stack-item"><span class="stack-dot"></span>Hugging Face</div>
+                <div class="stack-item"><span class="stack-dot"></span>Dagster</div>
+                <div class="stack-item"><span class="stack-dot"></span>LangFlow</div>
+                <div class="stack-item"><span class="stack-dot"></span>Qdrant</div>
+                <div class="stack-item"><span class="stack-dot"></span>SpaCy / NLP</div>
+                <div class="stack-item"><span class="stack-dot"></span>MLflow</div>
+                <div class="stack-item"><span class="stack-dot"></span>Pants Build</div>
+            </div>
+        </section>
+
+        <!-- ── What Drives Me ── -->
+        <section id="drives-me">
+            <div class="section-label">What Drives Me</div>
+            <p>
+                I hold an <strong>M.Sc. in Applied Statistics and Informatics from IIT Bombay</strong> and ranked <strong>All India 60 in IIT JAM</strong>. There's a mathematician underneath all the engineering, and that foundation quietly shapes how I think about every model, every tradeoff, every system design decision.
+            </p>
+            <p>
+                I've led teams, defined technical direction, and shipped products that clients pay for and depend on. I take ownership seriously — not because I'm told to, but because I genuinely care whether the thing I build actually works for the person using it.
+            </p>
+            <p>
+                My long-term ambition is to keep pushing at the frontier of <strong>agentic AI and LLM systems</strong> — not just deploying what exists, but contributing to what comes next.
+            </p>
+
+            <div class="callout-grid">
+                <div class="callout">
+                    <div class="callout-label">For Leaders</div>
+                    <p>I own hard problems end-to-end — from ambiguous business requirement to production system delivering measurable revenue and cost impact.</p>
+                </div>
+                <div class="callout">
+                    <div class="callout-label">For Peers</div>
+                    <p>Let's talk DSPy optimizers, Triton batching strategies, QLoRA fine-tuning tradeoffs, or agentic architectures. I'm always up for that conversation.</p>
+                </div>
+                <div class="callout">
+                    <div class="callout-label">For HR</div>
+                    <p>The career arc has been consistent: find the hardest problem in the room, build something that solves it, make it scale. Rinse, repeat.</p>
+                </div>
+                <div class="callout">
+                    <div class="callout-label">For Everyone</div>
+                    <p>This field is worth being excited about. I'm building at the frontier — and I'm just getting started.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <span>© 2026 Vicky Suman</span>
+        <span>
+            <a href="https://www.linkedin.com/in/vicky-suman-3a22a0123/" target="_blank">LinkedIn</a> ·
+            <a href="https://vsuman-ai.github.io/" target="_blank">Website</a> ·
+            <a href="https://medium.com/@vickysuman" target="_blank">Medium</a>
+        </span>
+    </footer>
+
+</body>
+</html>
