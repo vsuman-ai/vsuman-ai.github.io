@@ -43,6 +43,28 @@
     color: var(--ink);
     line-height: 1.8;
   }
+  .back-button {
+    position: fixed;
+    top: 1.25rem;
+    right: 1.5rem;
+    padding: 0.55rem 1.4rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background: rgba(250,249,246,0.95);
+    color: var(--ink);
+    border: 1px solid var(--border-strong);
+    box-shadow: 0 10px 30px rgba(26,26,24,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    z-index: 10;
+  }
+  .back-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 34px rgba(26,26,24,0.13);
+  }
 
   /* ── HEADER ── */
   .hero {
@@ -411,6 +433,7 @@
 </style>
 </head>
 <body>
+<a class="back-button" href="/blog.html" aria-label="Back to blog list">← Back</a>
 
 <!-- ══════════ HERO ══════════ -->
 <header class="hero">
